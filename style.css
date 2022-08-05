@@ -1,0 +1,252 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 10px 10%;
+    background-color:#9AA0A8;
+    box-shadow: rgba(16, 16, 32, 0.6) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+}
+nav ul li{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px ;
+} 
+nav ul li:hover{
+    background-color: white;
+    color: black;
+    transition: 0,5s;
+    border-radius: 5px;
+}
+.hamburger{
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before{
+    width: 100%;
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+.hamburger.is-active:before{
+    transform: rotate(-45deg) translate(-8px, 6px);
+} 
+.hamburger.is-active:after{
+    transform: rotate(45deg) translate(-9px, -8px);
+} 
+.hamburger.is-active .bar{
+    opacity: 0;
+}
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    display: block;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 2;
+    background-color: black;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+.mobile-nav.is-active{
+    left: 0;
+}
+.mobile-nav ul li{
+    display: block;
+    text-align: center;
+    margin:0 auto 16px;
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 16px;
+    background-color: bisque;
+    color: #9AA0A8;
+    text-decoration: none;
+}
+.mobile-nav ul li:hover{
+    background-color: white;
+}
+#home{
+    background-image: url('bgrndhome.png');
+    background-position: center right;
+    height: 90vh;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+}
+.text{
+    padding-top: 6rem;
+    color: black;
+    font-family: cursive;
+}
+.text h2{
+    font-size: 50px;
+}
+.border{
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px 60px 100px 60px;
+    border-radius: 10px;
+    background-color: rgb(255, 237, 214);
+    margin: 50px;
+}
+.border p{
+    text-align: center;
+    font-size: 20px;
+}
+#about h1{
+    text-align: center;
+    font-size: 30px;
+}
+#about{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 60px 40px; 
+    background:linear-gradient(#B4ECC0,#98B891);
+}
+#why{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 40px;
+    background:linear-gradient(#98B891,#98B891);
+}
+#why h1{
+    font-size: 30px;
+}
+#why p{
+    padding: 0 100px;
+    font-size: 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: bisque;
+    width: 260px;
+    padding: 20px;
+    margin: 30px;
+    justify-self: start;
+    text-align: center;
+}
+.card:hover .card-content{
+    margin-top: -60px;
+}
+.card:hover .text-group{
+    top: 60px;
+    opacity: 1;
+}
+.card-cover{
+   height: 200px;
+    width: 260px;
+    position: relative;
+    margin-top: -60px;
+    z-index: 1;
+    box-shadow: 0 5px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-cover h2{
+    color: white;
+    font-size: 38px;
+}
+.cover1{
+    background-color: #98B891;
+}
+.card-content{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-top: -200px;
+    position: relative;
+    overflow: hidden;
+    transition: margin-top .3s ease-out;
+}
+.text-group{
+    position: absolute;
+    top: -80px;
+    opacity: 0;
+    transition: top .3s .3s ease-out;
+}
+
+#how{
+    background-color: #72705B;
+    text-align: center;
+    padding: 60px 40px;
+    min-height: 70vh;
+}
+#how h1{
+  padding: 0 0 40px 0;
+  font-size: 30px;
+}
+#kontak{
+    background-color: wheat;
+    text-align: center;
+    padding: 60px 40px;
+    
+}
+#kontak h1{
+    font-size: 30px;
+    padding: 0 0 40px 0;
+}
+.alamat{
+    background-color: wheat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+@media (max-width:767px){
+    nav ul li{
+        display: inline-block;
+        font-weight: 500;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 10px ;
+        display: none;
+    } 
+}
+@media (min-width:768px){
+    .mobile-nav{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+}
